@@ -7,7 +7,7 @@ $(document).ready(function() {
     $
         ("#btnGetFacts").click(function() {
 
-            // handle it if input is blank
+            
 
             let userName = $("#userName").val();
             let coolFacts = generateCoolNameFacts(userName);
@@ -31,6 +31,7 @@ function generateCoolNameFacts(userName) {
     coolFacts += " <br> " + nameStart(userName);
     coolFacts += "<h3> " + nameEnd(userName) + "</h3>";
     coolFacts += " <br> " + getSpiritAnimal(userName);
+    coolFacts += " <h3> " + reverseName(userName) + "</h3>";
 
     console.log("initialized the'm coolFacts variable: " + coolFacts);
 
@@ -68,3 +69,10 @@ function getSpiritAnimal(name) {
 
 
 }
+
+function reverseName(name){
+    
+    var revString = name.split("").reverse().join("");
+   return "Your name spelled backwards is " + revString; 
+}
+
